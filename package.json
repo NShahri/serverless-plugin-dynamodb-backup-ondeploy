@@ -18,6 +18,14 @@
   "files": [
     "build/*"
   ],
+  "keywords": [
+    "serverless",
+    "plugin",
+    "backup",
+    "DynamoDB",
+    "deploy",
+    "ondemand"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
