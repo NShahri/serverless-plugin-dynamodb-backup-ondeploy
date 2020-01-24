@@ -7,12 +7,14 @@
   "repository": "git@github.com:NShahri/serverless-plugin-dynamodb-backup-ondeploy.git",
   "author": "Nima Shahri",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "aws-sdk": "^2.609.0",
     "chalk": "^3.0.0"
   },
+  "files": [
+    "build/*"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
