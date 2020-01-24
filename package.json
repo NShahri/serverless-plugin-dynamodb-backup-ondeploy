@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-dynamodb-backup-ondeploy",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Backup DynamoDB tables on serverless deploy.",
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
