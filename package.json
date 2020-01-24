@@ -1,0 +1,39 @@
+{
+  "name": "serverless-plugin-dynamodb-backup-ondeploy",
+  "version": "0.0.1",
+  "description": "Backup dynamodb tables on serverless deploy.",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
+  "repository": "git@github.com:NShahri/serverless-plugin-dynamodb-backup-ondeploy.git",
+  "author": "Nima Shahri",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.8.3",
+    "aws-sdk": "^2.609.0",
+    "chalk": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-proposal-throw-expressions": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-flow": "^7.8.3",
+    "babel-plugin-macros": "^2.8.0",
+    "cross-env": "^6.0.3",
+    "jest": "^25.1.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0"
+  },
+  "scripts": {
+    "prebuild": "rimraf build/",
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --out-dir build/esm/ --ignore \"src/**/*.test.js\"",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir build/cjs/ --ignore \"src/**/*.test.js\"",
+    "test": "jest",
+    "format": "prettier \"**/*.{js,ts,css,scss,json,html}\" \"!build/**\" --write && module-grouping 'src/**/*.js' --write"
+  }
+}
